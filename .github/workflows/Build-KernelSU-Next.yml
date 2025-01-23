@@ -22,16 +22,6 @@ jobs:
    steps:
      - name: Check Out
        uses: actions/checkout@v3
-       
-     - name: Cleanup
-       uses: rokibhasansagar/slimhub_actions@main
-
-     - name: Clean up disk space
-       run: |
-        sudo apt-get clean
-        sudo rm -rf /usr/share/dotnet /etc/mysql /var/lib/mysql
-        sudo rm -rf /usr/local/lib/android
-        df -h
         
      - name: Install dependencies
        run: |
